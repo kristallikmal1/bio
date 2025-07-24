@@ -17,13 +17,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
 const htmlRoot = document.getElementById('html-root');
 const themeBtn = document.getElementById('theme-btn');
 
-// Проверяем сохранённую тему
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
   htmlRoot.setAttribute('data-theme', savedTheme);
 }
 
-// Переключение темы
 themeBtn.addEventListener('click', () => {
   const current = htmlRoot.getAttribute('data-theme');
   const newTheme = current === 'dark' ? 'light' : 'dark';
