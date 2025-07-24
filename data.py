@@ -15,7 +15,3 @@ bio_data = {
     ],
     "contacts": {
         "telegram": "@kristallik_mal",
-        "youtube": "https://youtube.com/@kristallik_mal_moderator",
-        "github": "https://github.com/kristallik-mal"
-    }
-}
