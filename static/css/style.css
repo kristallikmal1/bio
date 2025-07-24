@@ -1,14 +1,11 @@
-/* style.css */
 :root {
   --bg: #f8f8f8;
   --text: #333;
   --sidebar-bg: #fff;
   --sidebar-border: #e0e0e0;
-  --section-bg: #f0f7ff;
   --link-color: #4a90e2;
   --footer-color: #888;
   --btn-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  --btn-hover: 1.05;
 }
 
 [data-theme="dark"] {
@@ -16,7 +13,6 @@
   --text: #e0e0e0;
   --sidebar-bg: #2d2d2d;
   --sidebar-border: #444;
-  --section-bg: #252535;
   --link-color: #6bb0ff;
   --footer-color: #aaa;
   --btn-shadow: 0 6px 12px rgba(0,0,0,0.4);
@@ -100,7 +96,7 @@ body {
 }
 
 .hero {
-  height: 300px; /* Уменьшил высоту */
+  height: 300px;
   position: relative;
   margin-bottom: 50px;
   border-radius: 10px;
@@ -119,12 +115,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 80px;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  /* Убрано: h2 с надписью */
 }
 
 .section {
@@ -140,11 +132,9 @@ body {
 
 .projects-list {
   list-style: none;
-  counter-reset: project-counter;
 }
 
 .projects-list li {
-  counter-increment: project-counter;
   margin-bottom: 16px;
   padding-left: 10px;
   color: var(--text);
@@ -156,7 +146,6 @@ body {
   color: var(--link-color);
 }
 
-/* Объёмные кнопки */
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -177,7 +166,7 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(var(--btn-hover));
+  transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
@@ -187,16 +176,6 @@ body {
 
 .btn-telegram {
   background: #0088cc;
-  color: white;
-}
-
-.btn-youtube {
-  background: #ff0000;
-  color: white;
-}
-
-.btn-github {
-  background: #333;
   color: white;
 }
 
