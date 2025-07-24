@@ -7,6 +7,8 @@
   --section-bg: #f0f7ff;
   --link-color: #4a90e2;
   --footer-color: #888;
+  --btn-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  --btn-hover: 1.05;
 }
 
 [data-theme="dark"] {
@@ -17,6 +19,7 @@
   --section-bg: #252535;
   --link-color: #6bb0ff;
   --footer-color: #aaa;
+  --btn-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 * {
@@ -97,7 +100,7 @@ body {
 }
 
 .hero {
-  height: 500px;
+  height: 300px; /* Уменьшил высоту */
   position: relative;
   margin-bottom: 50px;
   border-radius: 10px;
@@ -116,11 +119,12 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 25px;
-  font-size: 28px;
+  padding: 15px;
+  font-size: 20px;
   text-align: center;
+  /* Убрано: h2 с надписью */
 }
 
 .section {
@@ -152,17 +156,56 @@ body {
   color: var(--link-color);
 }
 
+/* Объёмные кнопки */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--btn-shadow);
+  transform: translateY(0);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(var(--btn-hover));
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-telegram {
+  background: #0088cc;
+  color: white;
+}
+
+.btn-youtube {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-github {
+  background: #333;
+  color: white;
+}
+
 footer {
   text-align: center;
   margin-top: 80px;
   color: var(--footer-color);
   font-size: 14px;
   padding-bottom: 30px;
-}
-
-@media (max-width: 900px) {
-  .sidebar { width: 240px; }
-  .content { margin-left: 240px; }
 }
 
 @media (max-width: 700px) {
@@ -178,6 +221,5 @@ footer {
     margin-left: 0;
     padding: 20px;
   }
-  .hero { height: 300px; }
-  .overlay { font-size: 22px; }
+  .hero { height: 200px; }
 }
