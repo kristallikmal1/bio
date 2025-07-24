@@ -26,10 +26,11 @@
   </nav>
 
   <main class="content">
+    <!-- Убрано: hero с надписью "жизнь в коде и Minecraft" -->
     <section id="hero" class="hero">
       <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Kristallik_mal" />
       <div class="overlay">
-        <h2>Жизнь в коде и Minecraft</h2>
+        <h2></h2> <!-- Оставим пустым или удалим h2 -->
       </div>
     </section>
 
@@ -49,17 +50,17 @@
 
     <section id="contacts" class="section">
       <h2>Связь со мной</h2>
-      <ul>
+      <div class="contact-buttons">
         {% if data.contacts.telegram %}
-          <li><a href="https://t.me/{{ data.contacts.telegram[1:] }}">💬 Telegram: {{ data.contacts.telegram }}</a></li>
+          <a href="https://t.me/{{ data.contacts.telegram[1:] }}" class="btn btn-telegram" target="_blank">{{ data.contacts.telegram }}</a>
         {% endif %}
         {% if data.contacts.youtube %}
-          <li><a href="{{ data.contacts.youtube }}">▶️ YouTube</a></li>
+          <a href="{{ data.contacts.youtube }}" class="btn btn-youtube" target="_blank">YouTube</a>
         {% endif %}
         {% if data.contacts.github %}
-          <li><a href="{{ data.contacts.github }}">💻 GitHub</a></li>
+          <a href="{{ data.contacts.github }}" class="btn btn-github" target="_blank">GitHub</a>
         {% endif %}
-      </ul>
+      </div>
     </section>
 
     <footer class="footer">
