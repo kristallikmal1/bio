@@ -27,9 +27,8 @@
   </nav>
 
   <main class="content">
-    <!-- Шапка -->
+    <!-- Шапка без фото -->
     <section id="hero" class="hero">
-      <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Kristallik_mal" />
       <div class="overlay"></div>
     </section>
 
@@ -56,12 +55,6 @@
         {% if data.contacts.telegram %}
           <a href="https://t.me/{{ data.contacts.telegram[1:] }}" class="btn btn-telegram" target="_blank">{{ data.contacts.telegram }}</a>
         {% endif %}
-        {% if data.contacts.youtube %}
-          <a href="{{ data.contacts.youtube }}" class="btn btn-youtube" target="_blank">YouTube</a>
-        {% endif %}
-        {% if data.contacts.github %}
-          <a href="{{ data.contacts.github }}" class="btn btn-github" target="_blank">GitHub</a>
-        {% endif %}
       </div>
     </section>
 
@@ -71,6 +64,7 @@
     </footer>
   </main>
 
+  <!-- Подключаем JavaScript -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
