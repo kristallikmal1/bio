@@ -13,6 +13,7 @@
     <button id="theme-btn">🌙 / 🌞</button>
   </div>
 
+  <!-- Меню слева -->
   <nav class="sidebar">
     <div class="sidebar-header">
       <h1>{{ data.name }}</h1>
@@ -26,7 +27,7 @@
   </nav>
 
   <main class="content">
-    <!-- Шапка без текста -->
+    <!-- Шапка -->
     <section id="hero" class="hero">
       <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Kristallik_mal" />
       <div class="overlay"></div>
@@ -55,12 +56,18 @@
         {% if data.contacts.telegram %}
           <a href="https://t.me/{{ data.contacts.telegram[1:] }}" class="btn btn-telegram" target="_blank">{{ data.contacts.telegram }}</a>
         {% endif %}
+        {% if data.contacts.youtube %}
+          <a href="{{ data.contacts.youtube }}" class="btn btn-youtube" target="_blank">YouTube</a>
+        {% endif %}
+        {% if data.contacts.github %}
+          <a href="{{ data.contacts.github }}" class="btn btn-github" target="_blank">GitHub</a>
+        {% endif %}
       </div>
     </section>
 
     <!-- Подвал -->
     <footer class="footer">
-      <p>by Kristallik_mal</p>
+      <p>Сайт создан с любовью &copy; 2025 | Kristallik_mal</p>
     </footer>
   </main>
 
