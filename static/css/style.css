@@ -1,8 +1,10 @@
+/* style.css */
 :root {
   --bg: #f8f8f8;
   --text: #333;
   --sidebar-bg: #fff;
   --sidebar-border: #e0e0e0;
+  --section-bg: #f0f7ff;
   --link-color: #4a90e2;
   --footer-color: #888;
   --btn-shadow: 0 6px 12px rgba(0,0,0,0.15);
@@ -13,6 +15,7 @@
   --text: #e0e0e0;
   --sidebar-bg: #2d2d2d;
   --sidebar-border: #444;
+  --section-bg: #252535;
   --link-color: #6bb0ff;
   --footer-color: #aaa;
   --btn-shadow: 0 6px 12px rgba(0,0,0,0.4);
@@ -176,6 +179,16 @@ body {
 
 .btn-telegram {
   background: #0088cc;
+  color: white;
+}
+
+.btn-youtube {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-github {
+  background: #333;
   color: white;
 }
 
