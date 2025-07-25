@@ -1,4 +1,3 @@
-# data.py
 bio_data = {
     "name": "Kristallik_mal",
     "description": "Привет, я Кристалик, пытаюсь программировать",
@@ -12,4 +11,6 @@ bio_data = {
         {"title": "Первый сайт на Flask", "description": "Создал сайт-портфолио с помощью Python и Flask. Учился шаблонам, стилям и размещению."}
     ],
     "contacts": {
-        "telegram": "@kristallik_mal",
+        "telegram": "@kristallik_mal"
+    }
+}
